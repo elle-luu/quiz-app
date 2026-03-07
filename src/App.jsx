@@ -2,6 +2,11 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import { BrowserRouter, Routes, Route } from "react-router-dom"
+import Landing from "./pages/Landing"
+import Dashboard from "./pages/Dashboard"
+import Quiz from "./pages/Quiz"
+import Result from "./pages/Result"
 
 function App() {
   const [count, setCount] = useState(0)
@@ -24,7 +29,21 @@ function App() {
         <p>
           Edit <code>src/App.jsx</code> and save to test HMR
         </p>
+      
       </div>
+
+      <div>
+         <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Landing />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/quiz/:category" element={<Quiz />} />
+        <Route path="/result" element={<Result />} />
+      </Routes>
+    </BrowserRouter>
+      </div>
+
+
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>

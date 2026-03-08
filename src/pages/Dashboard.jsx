@@ -26,7 +26,8 @@ function Dashboard({ startQuiz }) {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 p-10 mt-10 items-start max-w-7xl mx-auto">
 
-        <button className="w-full max-w-sm h-32 md:w-80 md:h-40 flex items-center justify-start gap-6 text-2xl bg-[#8A8CAC] text-white p-8 rounded-full transition-transform hover:bg-[#656A9E] hover:scale-105 text-left">
+        <button onClick={() => handleCategoryClick('Science')} 
+        className="w-full max-w-sm h-32 md:w-80 md:h-40 flex items-center justify-start gap-6 text-2xl bg-[#8A8CAC] text-white p-8 rounded-full transition-transform hover:bg-[#656A9E] hover:scale-105 text-left">
          {/* The Icon */}
           <div className="bg-white/10 p-3 rounded-2xl">
             <img src={scienceIcon} alt="Science" className="w-16 h-16 object-contain" />
@@ -37,7 +38,8 @@ function Dashboard({ startQuiz }) {
           </span> 
         </button>
 
-        <button className="w-full max-w-sm h-32 md:w-80 md:h-40 flex items-center justify-start gap-6 text-2xl bg-[#8A8CAC] text-white p-8 rounded-full transition-transform hover:bg-[#656A9E] hover:scale-105 text-left">
+        <button onClick={() => handleCategoryClick('Maths')}
+        className="w-full max-w-sm h-32 md:w-80 md:h-40 flex items-center justify-start gap-6 text-2xl bg-[#8A8CAC] text-white p-8 rounded-full transition-transform hover:bg-[#656A9E] hover:scale-105 text-left">
          {/* The Icon */}
           <div className="bg-white/10 p-3 rounded-2xl">
             <img src={mathIcon} alt="Maths" className="w-16 h-16 object-contain" />
@@ -48,7 +50,8 @@ function Dashboard({ startQuiz }) {
           </span> 
         </button>
 
-        <button className="w-full max-w-sm h-32 md:w-80 md:h-40 flex items-center justify-start gap-6 text-2xl bg-[#8A8CAC] text-white p-8 rounded-full transition-transform hover:bg-[#656A9E] hover:scale-105 text-left">
+        <button onClick={() => handleCategoryClick('General Knowledge')}
+         className="w-full max-w-sm h-32 md:w-80 md:h-40 flex items-center justify-start gap-6 text-2xl bg-[#8A8CAC] text-white p-8 rounded-full transition-transform hover:bg-[#656A9E] hover:scale-105 text-left">
           {/* The Icon */}
           <div className="bg-white/10 p-3 rounded-2xl">
             <img src={gkIcon} alt="General Knowledge" className="w-16 h-16 object-contain" />
@@ -59,7 +62,8 @@ function Dashboard({ startQuiz }) {
           </span> 
         </button>
 
-        <button className="w-full max-w-sm h-32 md:w-80 md:h-40 flex items-center justify-start gap-6 text-2xl bg-[#8A8CAC] text-white p-8 rounded-full transition-transform hover:bg-[#656A9E] hover:scale-105 text-left">
+        <button onClick={() => handleCategoryClick('Geography')} 
+        className="w-full max-w-sm h-32 md:w-80 md:h-40 flex items-center justify-start gap-6 text-2xl bg-[#8A8CAC] text-white p-8 rounded-full transition-transform hover:bg-[#656A9E] hover:scale-105 text-left">
           {/* The Icon */}
           <div className="bg-white/10 p-3 rounded-2xl">
             <img src={geoIcon} alt="Geography" className="w-16 h-16 object-contain" />

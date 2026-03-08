@@ -17,7 +17,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Landing />} />
         <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/quiz" element={<Quiz />} />
+        <Route path="/quiz/:category" element={<Quiz />} />
         <Route path="/result" element={<Result />} />
 
       </Routes>

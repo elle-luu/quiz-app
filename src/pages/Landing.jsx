@@ -1,24 +1,31 @@
 import { useNavigate } from "react-router-dom"
+import React from "react"
+import logo from "../assets/start_logo.png"
 
-function Landing() {
-  const navigate = useNavigate()
+const Landing = () => {
+  const navigate = useNavigate();
+  
+    return (
+      
 
-  return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-purple-600 text-white">
+      <div className="landing-container">
+        <div className="hero-contain">
+        <img src={logo} alt="App Logo" className="app-logo" />
+        <h1 className="app-name">
+          QuizLab
+        </h1>
+        <button className="start-btn" onClick={() => navigate("/dashboard")}>
+          Start Quiz
+        </button>
+        </div>
+        </div>
+    ) 
 
-      <h1 className="text-4xl font-bold mb-6">
-        Quiz App
-      </h1>
-
-      <button
-        onClick={() => navigate("/dashboard")}
-        className="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold"
-      >
-        Start Quiz
-      </button>
-
-    </div>
-  )
+  
+  
 }
+
+
+
 
 export default Landing

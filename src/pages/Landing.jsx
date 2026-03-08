@@ -7,13 +7,13 @@ const Landing = () => {
 
   return (
     // 1. Container: Use min-h-screen to cover the whole screen and justify-center/items-center to place content in the middle.
-    <div className="h-screen w-screen flex flex-col items-center justify-between bg-[#959BB5] py-16 px-4" overflow-hidden>
+    <div className="h-screen w-screen flex flex-col items-center justify-between font-poppins bg-[#959BB5] py-16 px-4 overflow-hidden">
       
       {/* 2. Top Section: App Name and Logo Container */}
       <div className="flex flex-col items-center gap-10">
         
         {/* 3. Title: "QuizLab" - Made bold and blue-purple, with slight tracking (letter-spacing). */}
-        <h1 className="text-6xl font-extrabold text-blue-900 tracking-tight">
+        <h1 className="text-6xl font-extrabold text-[#3A3E6C] tracking-tight">
           QuizLab
         </h1>
 
@@ -21,7 +21,7 @@ const Landing = () => {
         <img 
           src={logo} 
           alt="Quiz Brain Icon" 
-          className="w-80 h-auto aspect-auto drop-shadow-[0_35px_60px_-15px_rgba(0,0,0,0.8)] shdow-blue-900/50"
+          className="w-80 h-auto aspect-auto drop-shadow-[0_35px_60px_-15px_rgba(0,0,0,0.8)] shdow-blue-900/60"
         />
       </div>
 
@@ -32,7 +32,7 @@ const Landing = () => {
       <button 
         // This line fixes the navigation issue you had on line 42 of image_5.png
         onClick={() => navigate('/dashboard')} 
-        className="px-12 py-5 text-2xl font-bold text-white bg-blue-950 rounded-full transition-transform hover:scale-105"
+        className="px-12 py-5 text-2xl font-bold text-white bg-[#3A3E6C] rounded-full transition-transform hover:bg-[#656A9E] scale-105"
       >
         Start Quiz
       </button>

@@ -1,16 +1,76 @@
-    # React + Vite
+# 🧪 QuizLab
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+QuizLab is a quiz app built with React. Pick a category, answer 10 questions before the timer runs out, and see how you score.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## What it does
 
-## React Compiler
+- Pick from 4 categories: **Science, Maths, General Knowledge, Geography**
+- Each question has a **15-second timer** — answer before it runs out or it skips automatically
+- Answers are **shuffled randomly** every time so you can't memorize positions
+- At the end you get your **score, percentage, and feedback**
+- Questions are fetched **live from the internet** so you get fresh questions every time
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## How to run it on your computer
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Make sure you have [Node.js](https://nodejs.org/) installed first, then:
+
+```bash
+# Step 1 — Download the project
+git clone https://github.com/your-username/quizlab.git
+
+# Step 2 — Go into the project folder
+cd quizlab
+
+# Step 3 — Install dependencies
+npm install
+
+# Step 4 — Start the app
+npm run dev
+```
+
+Then open your browser and go to **http://localhost:5173**
+
+---
+
+## How the app works
+
+```
+Start → Pick a Category → Answer 10 Questions → See Your Score → Play Again
+```
+
+That's it. No login, no signup, just open and play.
+
+---
+
+## Folder structure (where things live)
+
+```
+src/
+├── pages/
+│   ├── Landing.jsx      # The first screen you see
+│   ├── Dashboard.jsx    # Where you pick a category
+│   ├── Quiz.jsx         # The actual quiz with timer and answers
+│   └── Result.jsx       # Your score at the end
+├── services/
+│   └── api.js           # Fetches questions from the internet
+└── App.jsx              # Connects all the pages together
+```
+
+---
+
+## Where the questions come from
+
+Questions are pulled from **[The Trivia API](https://the-trivia-api.com)** — it's free, requires no account or API key, and works straight out of the box.
+
+---
+
+## Built with
+
+- **React** — builds the UI
+- **React Router** — handles moving between pages
+- **Tailwind CSS** — handles styling
+- **Vite** — runs the development server

@@ -1,12 +1,22 @@
-export const API_URLS = {
-  science: "https://opentdb.com/api.php?amount=10&category=17&type=multiple",
-  maths: "https://opentdb.com/api.php?amount=10&category=19&type=multiple",
-  general_knowledge: "https://opentdb.com/api.php?amount=10&category=9&type=multiple",
-  geography: "https://opentdb.com/api.php?amount=10&category=22&type=multiple",
+const BASE_URL = "https://the-trivia-api.com/v2/questions";
+
+const CATEGORY_MAP = {
+  science: "science",
+  maths: "mathematics",
+  general_knowledge: "general_knowledge",
+  geography: "geography",
 };
 
-export const fetchQuestions = async (category) => {
-    const response = await fetch(API_URLS[category]);
-    const data = await response.json();
-    return data.results;
-};
+export async function fetchQuestions(category) {
+  const apiCategory = CATEGORY_MAP[category];
+  if (!apiCategory) throw new Error(`Unknown category: "${category}"`);
+
+  const res = await fetch(`${BASE_URL}?categories=${apiCategory}&limit=10`);
+  if (!res.ok) throw new Error(`HTTP error: ${res.status}`);
+
+  const data = await res.json();
+  if (!Array.isArray(data) || data.length === 0) throw new Error("No questions returned.");
+
+  // Return raw API fields — no renaming
+  return data;
+}

@@ -18,7 +18,8 @@ function Result() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-[#959BB5] text-white gap-6 p-8">
+    <div className="
+min-h-screen w-screen flex items-center justify-center bg-[#959BB5] text-white gap-6 p-8">
 
       <h1 className="text-4xl font-extrabold text-[#3A3E6C]">
         Quiz Completed!
@@ -39,7 +40,7 @@ function Result() {
         </button>
         <button
           onClick={() => navigate('/')}
-          className="px-8 py-3 bg-white text-[#3A3E6C] font-bold rounded-full hover:bg-gray-100 hover:scale-105 transition-transform"
+          className=" p-4 px-8 py-3 bg-white text-[#3A3E6C] font-bold rounded-full hover:bg-gray-100 hover:scale-105 transition-transform"
         >
           Home
         </button>
